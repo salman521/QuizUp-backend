@@ -11,8 +11,9 @@ const express = require("express"),
 var cors = require("cors");
 var mongoose = require("mongoose");
 
+require("./config.js");
 mongoose.Promise = global.Promise;
-mongoose.connect("mongodb://localhost/QuizUp", {
+mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useFindAndModify: false,
   useUnifiedTopology: true
