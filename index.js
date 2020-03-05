@@ -1,7 +1,7 @@
 const express = require("express"),
   app = express(),
   bodyParser = require("body-parser"),
-  PORT = 5000,
+  PORT = process.env.PORT || 5000,
   userRoutes = require("./routes/users"),
   categoryRoutes = require("./routes/category"),
   questionRoutes = require("./routes/questions"),
