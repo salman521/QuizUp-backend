@@ -2,7 +2,7 @@ var { Category } = require("../../models/category");
 
 var getCategory = async (req, res, next) => {
   try {
-    var category = await Category.find({});
+    var category = await Category.find({ userId: req.params.id });
     if (!category) {
       throw Error("No Categories Found");
     } else {

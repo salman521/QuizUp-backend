@@ -4,8 +4,12 @@ var CategorySchema = mongoose.Schema(
   {
     name: {
       type: String,
-      required: true
-    }
+      required: true,
+    },
+    userId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+    },
   },
   { usePushEach: true }
 );

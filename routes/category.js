@@ -8,7 +8,7 @@ var updateCategory = require("../controller/category/updateCategory");
 
 router.post("/addCategory", addCategory);
 
-router.get("/", getCategory);
+router.get("/:id", getCategory);
 router.delete("/", deleteCategory);
 router.put("/", updateCategory);
 

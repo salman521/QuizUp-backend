@@ -6,7 +6,7 @@ var adminSignup = async (req, res, next) => {
     var data = await new Admin({
       email: email.trim(),
       password: password.trim(),
-      name
+      name,
     });
     var newAdmin = await data.save();
     if (newAdmin) {
