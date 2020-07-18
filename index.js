@@ -11,7 +11,8 @@ var mongoose = require("mongoose");
 
 require("./config.js");
 mongoose.Promise = global.Promise;
-mongoose.connect(process.env.MONGODB_URI, {
+// mongoose.connect("mongodb://localhost/SmartShoppingBot", {
+mongoose.connect("mongodb://localhost/QuizUp", {
   useNewUrlParser: true,
   useFindAndModify: false,
   useUnifiedTopology: true,
